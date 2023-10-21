@@ -67,11 +67,15 @@ inquirer
 
         ${badge}
 
-        ## Description
+        ## Description {#description}
         
         ${response.description}
+
+        ## Table of Contents
+
+        - [Description](#Description)
         
-        ## Installation
+        ## Installation {#installation}
         
         ${response.install}
         
@@ -79,17 +83,17 @@ inquirer
         
         ${response.usage}
 
-        ## Test Instructions
-
-        ${response.test}
-
         ## Contribution Guidelines
 
         ${response.contribute}
 
+        ## Test Instructions
+
+        ${response.test}
+
         ## Questions
 
-        ![${github}]()
+        ![${response.github}](https://github.com/${response.github})
         
         ## Credits
     
