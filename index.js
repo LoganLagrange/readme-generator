@@ -58,7 +58,6 @@ inquirer
 
     ])
     .then((response) => {
-        console.log(response);
         let badge = ``;
         if (response.license === `MIT`) {
             badge = `[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)`
@@ -126,6 +125,6 @@ The repo is covered under the standard ${response.license} license. See LICENSE 
 
 // TODO: Create a function to write README file
 function writeToFile(fileName, data) {
-    fs.writeFile(fileName, data, (err) => err ? console.error(err) : console.log(`Success!`));
+    fs.writeFile(fileName, data, (err) => err ? console.error(err) : console.log(`README succesfully generated, check output folder!`));
 }
 
