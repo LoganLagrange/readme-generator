@@ -4,7 +4,7 @@
 
 ## Description
         
-This project was undertaken to create a command line based javascript program to take user inputs and generate a professional README file  for a project. It uses javascript utilizing node and the enquirer NPM package
+This project was undertaken to create a command line based javascript program to take user inputs and generate a professional README file  for a project. It uses javascript utilizing node and the enquirer NPM package.
 
 ## Table of Contents
 
@@ -23,7 +23,7 @@ Clone repo and open using a command line interface
         
 ## Usage
         
-It is used by using the command node index.js when in the cloned directory and entering the relevant information into the inputs that appear. When all have been answered it generates a README file in the output directory that can be moved or copied into your project directory.
+It is used by using the command node index.js when in the cloned directory and entering the relevant information into the inputs that appear. When all have been answered it generates a README file in the output directory that can be moved or copied into your project directory. Note: the program will overwrite anything within the README.md file in the output directory whenever it is run, so be sure to move or copy the file if you run the program again and don't want it to be lost.
 
 ## Contribution Guidelines
 
