@@ -1,6 +1,6 @@
 // TODO: Include packages needed for this application
 const fs = require(`fs`);
-const inquirer =  require(`inquirer`);
+const inquirer = require(`inquirer`);
 // TODO: Create an array of questions for user input
 inquirer
     .prompt([
@@ -28,7 +28,7 @@ inquirer
             type: `input`,
             message: `Contribution guidelines:`,
             name: `contribute`
-        }, 
+        },
         {
             type: `input`,
             message: `Test instructions:`,
@@ -50,7 +50,7 @@ inquirer
             message: `What is your email?`,
             name: `email`
         }
-        
+
     ])
     .then((response) => {
         console.log(response);
@@ -63,53 +63,64 @@ inquirer
             badge = `[![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)`
         }
 
-        const format = `# ${response.title}
+        const format = `
+# ${response.title}
 
-        ${badge}
+${badge}
 
-        ## Description {#description}
+## Description
         
-        ${response.description}
+${response.description}
 
-        ## Table of Contents
+## Table of Contents
 
-        - [Description](#Description)
+- [Description](#description)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Contribution Guidelines](#contribution-guidelines)
+- [Test Instructions](#test-instructions)
+- [Questions](#questions)
+- [Credits](#credits)
+- [License](#license)
         
-        ## Installation {#installation}
+## Installation
         
-        ${response.install}
+${response.install}
         
-        ## Usage
+## Usage
         
-        ${response.usage}
+${response.usage}
 
-        ## Contribution Guidelines
+## Contribution Guidelines
 
-        ${response.contribute}
+${response.contribute}
 
-        ## Test Instructions
+## Test Instructions
 
-        ${response.test}
+${response.test}
 
-        ## Questions
+## Questions
 
-        ![${response.github}](https://github.com/${response.github})
+Please direct all questions to my github or email.
+
+Github: [${response.github}](https://github.com/${response.github})
+
+Email: ${response.email}
         
-        ## Credits
+## Credits
     
 
         
-        ## License
+## License
         
-        The repo is covered under the standard ${response.license} license. See LICENSE in repo for more info.`
+The repo is covered under the standard ${response.license} license. See LICENSE in repo for more info.`
+
+        writeToFile(`./output/README.md`, format);
     });
 
 
 // TODO: Create a function to write README file
-function writeToFile(fileName, data) {}
+function writeToFile(fileName, data) {
+    fs.writeFile(fileName, data, (err) => err ? console.error(err) : console.log(`Success!`));
+}
 
-// TODO: Create a function to initialize app
-function init() {}
-
-// Function call to initialize app
-init();
