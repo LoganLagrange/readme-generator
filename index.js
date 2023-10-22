@@ -49,6 +49,11 @@ inquirer
             type: `input`,
             message: `What is your email?`,
             name: `email`
+        },
+        {
+            type: `input`,
+            message: `Is there anyone that needs to be credited for this project?`,
+            name: `credits`
         }
 
     ])
@@ -109,7 +114,7 @@ Email: ${response.email}
         
 ## Credits
     
-
+${response.credits}
         
 ## License
         

@@ -1,11 +1,11 @@
 
-# ghhg
+# README Generator
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 ## Description
         
-ghgh
+This project was undertaken to create a command line based javascript program to take user inputs and generate a professional README file  for a project. It uses javascript utilizing node and the enquirer NPM package
 
 ## Table of Contents
 
@@ -20,19 +20,19 @@ ghgh
         
 ## Installation
         
-gh
+Clone repo and open using a command line interface
         
 ## Usage
         
-
+It is used by using the command node index.js when in the cloned directory and entering the relevant information into the inputs that appear. When all have been answered it generates a README file in the output directory that can be moved or copied into your project directory.
 
 ## Contribution Guidelines
 
-
+N/A
 
 ## Test Instructions
 
-
+N/A
 
 ## Questions
 
@@ -44,7 +44,7 @@ Email: lagrangelogan@gmail.com
         
 ## Credits
     
-
+N/A
         
 ## License
         
